@@ -1,0 +1,36 @@
+{
+  "name": "libreria-alvarez",
+  "description": "App para la gestión de la Librería Alvarez",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run"
+  },
+  "dependencies": {
+    "compression": "latest",
+    "polka": "latest",
+    "sirv": "latest"
+  },
+  "devDependencies": {
+    "npm-run-all": "latest",
+    "sapper": "latest",
+    "svelte": "latest",
+    "@babel/core": "latest",
+    "@babel/plugin-syntax-dynamic-import": "latest",
+    "@babel/plugin-transform-runtime": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/runtime": "latest",
+    "rollup": "latest",
+    "rollup-plugin-babel": "latest",
+    "rollup-plugin-commonjs": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-replace": "latest",
+    "rollup-plugin-svelte": "latest",
+    "rollup-plugin-terser": "latest"
+  }
+}
