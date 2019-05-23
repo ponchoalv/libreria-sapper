@@ -1,17 +1,3 @@
-<script>
-import { cubicIn } from 'svelte/easing';
-
-function spin(node, { duration }) {
-		return {
-			duration,
-			css: t => {
-				let eased = cubicIn(t);
-				return `transform: scale(${eased}) rotate(${eased * 1080}deg);`
-			}
-		};
-	}
-</script>
-
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -29,10 +15,36 @@ function spin(node, { duration }) {
 		margin: 0 0 1em 0;
 	}
 	
+	@keyframes home-logo {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(40deg);
+    }
+		66% {
+
+			transform: rotate(-40deg);
+		}
+		90% {
+			transform: rotate(0deg);
+		}
+		95% {
+			transform: scale(1.3);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
 	img {
 		width: 100%;
 		max-width: 400px;
 		margin: 0 0 1em 0;
+		animation-name: home-logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: easy-in-out;
     margin-right: 11px;
     margin-bottom: 4px;
 	}
@@ -55,7 +67,7 @@ function spin(node, { duration }) {
 <h1>Great success AND GREATNESSS!</h1>
 
 <figure>
-	<img in:spin="{{duration: 1000}}" alt='Logo librería Alvarez' src='logo-black.png'>
+	<img alt='Logo librería Alvarez' src='logo-black.png'>
 	<figcaption>HIGH FIVE! BABYYYY</figcaption>
 </figure>
 
