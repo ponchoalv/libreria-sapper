@@ -23,7 +23,6 @@
         transform: rotate(40deg);
     }
 		66% {
-
 			transform: rotate(-40deg);
 		}
 		90% {
