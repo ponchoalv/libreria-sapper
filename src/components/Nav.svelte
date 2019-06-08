@@ -1,7 +1,7 @@
 <script>
 	import routes from './routes.js';
 	import Hoverable from './Hoverable.svelte';
-	import { slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	export let segment;
 </script>
@@ -56,7 +56,7 @@
 		width: calc(100% - 1em);
 		height: 15px;
 		background-color: rgb(255,62,0);
-		transition: height 0.2s;
+		transition: height 0.2s ease-in-out;
 		display: block;
 		bottom: -1px;
 	}
@@ -77,7 +77,7 @@
 		{#each routes as route}
 			<li>
 				<Hoverable let:hovering={active}>
-					<a transition:slide={active} rel='{route.prefetch ? 'prefetch' : ''}' class:selected='{segment === route.segment}' class:active href='{route.path}'>
+					<a transition:fade rel='{route.prefetch ? 'prefetch' : ''}' class:selected='{segment === route.segment}' class:active href='{route.path}'>
 						{route.display}
 					</a>
 				</Hoverable>

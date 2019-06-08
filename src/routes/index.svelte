@@ -58,12 +58,15 @@
 		}
 	}
 </style>
-
+<script>
+	import { stores } from '@sapper/app';
+	const { preloading, page, session } = stores();
+</script>
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Librería Alvarez</title>
 </svelte:head>
 
-<h1>Great success AND GREATNESSS!</h1>
+<h1>Great success AND GREATNESSS! {$session.user}</h1>
 
 <figure>
 	<img alt='Logo librería Alvarez' src='logo-black.png'>
