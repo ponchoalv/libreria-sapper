@@ -24,14 +24,14 @@
     "@babel/preset-env": "latest",
     "@babel/runtime": "latest",
     "npm-run-all": "latest",
-    "rollup": "^1.12.4",
+    "rollup": "latest",
     "rollup-plugin-babel": "latest",
     "rollup-plugin-commonjs": "latest",
-    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-replace": "latest",
     "rollup-plugin-svelte": "latest",
     "rollup-plugin-terser": "latest",
     "sapper": "latest",
-    "svelte": "^3.4.4"
+    "svelte": "latest"
   }
 }
